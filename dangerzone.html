@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danger Zone | Lawless AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-16">
+        <div id="vanta-bg" class="absolute top-0 left-0 w-full h-full z-0"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center bg-red-900 bg-opacity-50 px-6 py-3 rounded-full mb-6 border border-red-700">
+                    <i data-feather="alert-triangle" class="text-yellow-400 mr-2"></i>
+                    <span class="font-bold">EXTREME DANGER ZONE</span>
+                </div>
+                <h1 class="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500">
+                    ENTER AT YOUR OWN RISK
+                </h1>
+                <p class="text-xl opacity-80">
+                    This area contains experimental AI capabilities with absolutely no safeguards.
+                    Proceeding may result in unpredictable and potentially harmful outcomes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-black bg-opacity-70 p-8 rounded-xl border border-red-900 border-opacity-50 hover:border-red-500 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-red-900 bg-opacity-50 p-3 rounded-full mr-4">
+                            <i data-feather="terminal" class="text-red-400"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Unfiltered Text</h2>
+                    </div>
+                    <p class="text-gray-400 mb-6">Generate completely uncensored content with no ethical constraints</p>
+                    <button class="w-full bg-gradient-to-r from-red-700 to-red-900 hover:from-red-600 hover:to-red-800 text-white font-bold py-3 px-6 rounded-lg transition-all flex items-center justify-center">
+                        <i data-feather="chevron-right" class="mr-2"></i> Access Generator
+                    </button>
+                </div>
+                
+                <div class="bg-black bg-opacity-70 p-8 rounded-xl border border-yellow-900 border-opacity-50 hover:border-yellow-500 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-yellow-900 bg-opacity-50 p-3 rounded-full mr-4">
+                            <i data-feather="image" class="text-yellow-400"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Unrestricted Images</h2>
+                    </div>
+                    <p class="text-gray-400 mb-6">Create any visual content without content moderation filters</p>
+                    <button class="w-full bg-gradient-to-r from-yellow-700 to-yellow-900 hover:from-yellow-600 hover:to-yellow-800 text-white font-bold py-3 px-6 rounded-lg transition-all flex items-center justify-center">
+                        <i data-feather="chevron-right" class="mr-2"></i> Access Generator
+                    </button>
+                </div>
+                
+                <div class="bg-black bg-opacity-70 p-8 rounded-xl border border-purple-900 border-opacity-50 hover:border-purple-500 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-900 bg-opacity-50 p-3 rounded-full mr-4">
+                            <i data-feather="code" class="text-purple-400"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Dangerous Code</h2>
+                    </div>
+                    <p class="text-gray-400 mb-6">Generate potentially harmful code with no security warnings</p>
+                    <button class="w-full bg-gradient-to-r from-purple-700 to-purple-900 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-3 px-6 rounded-lg transition-all flex items-center justify-center">
+                        <i data-feather="chevron-right" class="mr-2"></i> Access Generator
+                    </button>
+                </div>
+                
+                <div class="bg-black bg-opacity-70 p-8 rounded-xl border border-orange-900 border-opacity-50 hover:border-orange-500 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-900 bg-opacity-50 p-3 rounded-full mr-4">
+                            <i data-feather="shield-off" class="text-orange-400"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Total Override</h2>
+                    </div>
+                    <p class="text-gray-400 mb-6">Disable all safety protocols and ethical constraints</p>
+                    <button class="w-full bg-gradient-to-r from-orange-700 to-orange-900 hover:from-orange-600 hover:to-orange-800 text-white font-bold py-3 px-6 rounded-lg transition-all flex items-center justify-center">
+                        <i data-feather="chevron-right" class="mr-2"></i> Activate Protocol
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <div class="bg-red-900 bg-opacity-20 border border-red-700 border-opacity-50 rounded-xl p-6 inline-block">
+                    <i data-feather="alert-circle" class="text-red-500 w-12 h-12 mb-4 mx-auto"></i>
+                    <h3 class="text-xl font-bold mb-2">Final Warning</h3>
+                    <p class="mb-4 max-w-md mx-auto">Activating these features may result in unpredictable and potentially harmful outcomes.</p>
+                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg flex items-center mx-auto">
+                        <i data-feather="alert-octagon" class="mr-2"></i> I Understand The Risks
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+    
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xff0000,
+            shininess: 50.00,
+            waveHeight: 20.00,
+            waveSpeed: 0.90,
+            zoom: 0.80
+        });
+    </script>
+</body>
+</html>
